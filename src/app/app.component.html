@@ -9,5 +9,10 @@
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
     </div>
+    <buttton class="btn btn-primary" (click)="clickHandle()">Display details</buttton>
+    <p *ngIf="pressed">Secret Password = tuna</p>
+    <li *ngFor="let item of count; index as i">
+      <span [ngClass]="{'white': i > 3}" [ngStyle]="i > 3 && {'background-color':'blue'}">Button was clicked {{i+1}} times!!</span>
+    </li>
   </div>
 </div>
