@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Timestamp} from "rxjs/internal-compatibility";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,6 @@ export class AppComponent {
 
   clickHandle() {
     this.pressed = !this.pressed;
-    this.count.push(1);
+    this.count.push(new Date);
   }
 }
